@@ -39,10 +39,8 @@ error_log(json_encode($response));
 
 # --- #
 
-$message = '{"message_id":2006,"from":{"id":8794645599,"is_bot":true,"first_name":"Sentinel","username":"Sentinel_W_bot"},"chat":{"id":-1002126236997,"title":"Uzbequist\u00e3o do Cocaia","type":"supergroup"},"date":1775278464,"text":"Ol\u00e1, Daniel! Seu nome de usu\u00e1rio u127_200 e o seu chat_id \u00e9 6152438478.","entities":[{"offset":5,"length":6,"type":"bold"},{"offset":33,"length":8,"type":"bold"},{"offset":60,"length":10,"type":"phone_number"},{"offset":60,"length":10,"type":"bold"}]}';
+$hashfile = hash('sha1',$from_id); // na verdade, virá do webhook
 
-$data = Bin::write($from_id,$message);
+$ok = Bin::write($hashfile,$data);
 
-var_dump($data);
-
-$trad = Bin::read($from_id);
+var_dump($ok);
