@@ -26,7 +26,7 @@ class TgClient
         ]);
     }
 
-    public function treatWebhook(): array|false
+    public static function treatWebhook()
     {
         $content = file_get_contents('php://input');
         $data = json_decode($content, true);

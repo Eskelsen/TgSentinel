@@ -14,3 +14,11 @@
  * - Gerenciamento de usuário
  * - Comandos primitivos
 */
+
+include __DIR__ . '/env.php';
+include __DIR__ . '/config.php';
+include __DIR__ . '/TgClient.php';
+
+$data = TgClient::treatWebhook();
+
+error_log(json_encode($data));
