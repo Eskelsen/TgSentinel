@@ -30,10 +30,12 @@ class TgClient
     public static function treatWebhook()
     {
         $content = file_get_contents('php://input');
+        
+        error_log('TgClient.treatWebhook: ' . $content);
+        
         $data = json_decode($content, true);
 
         if (empty($data)) {
-            error_log('TgClient.treatWebhook: ' . $content);
             return false;
         }
 
