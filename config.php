@@ -8,3 +8,5 @@ error_reporting(E_ALL);
 # Erros Log Output
 ini_set('log_errors', DEV);
 ini_set('error_log', __DIR__  . '/errors.log');
+
+date_default_timezone_set(TIMEZONE);
