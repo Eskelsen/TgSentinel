@@ -14,8 +14,9 @@ class TgClient
     public function sendMessage($chatId, string $message)
     {
         return $this->request('sendMessage', [
-            'chat_id' => $chatId,
-            'text'    => $message
+            'chat_id'   => $chatId,
+            'text'      => $message,
+            'parse_mode' => 'HTML'
         ]);
     }
 

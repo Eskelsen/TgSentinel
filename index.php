@@ -31,7 +31,7 @@ extract($data);
 
 $tg = new TgClient(TG_TOKEN);
 
-$msg = "Olá, $data! Seu sobrenome é $surname, nome de usuário $username e o seu chat_id é $chat_id";
+$msg = "Olá, <b>$name</b>! Seu nome de usuário <b>$username</b> e o seu chat_id é <b>$chat_id</b>.";
 
 $response = $tg->sendMessage($chat_id,$msg);
 
