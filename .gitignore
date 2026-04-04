@@ -2,3 +2,5 @@ env.php
 test.php
 *.log
 *.txt
+data/*.bin
+tmp/*.log
